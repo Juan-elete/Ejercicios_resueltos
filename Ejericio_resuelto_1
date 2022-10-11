@@ -1,0 +1,22 @@
+#EJERCIO VECTORES-MAURICIO MORA
+
+# Desarrollar un algoritmo que calcule el producto escalar y
+# vectorial de dos vectores de 3 elementos cuyos valores se
+# introducen por pantalla.
+
+x_1=int(input("Ingrese el valor en x del primer vector: "))
+y_1=int(input("Ingrese el valor en y del primer vector: "))
+z_1=int(input("Ingrese el valor en z del primer vector: "))
+
+x_2=int(input("Ingrese el valor en x del segundo vector: "))
+y_2=int(input("Ingrese el valor en y del segundo vector: "))
+z_2=int(input("Ingrese el valor en z del segundo vector: "))
+
+p_esc=((x_1*x_2)+(y_1*y_2)+(z_1*z_2))
+print("El producto escalar de los anteriores vecotres es: ", p_esc)
+
+p_vec_x=((y_1*z_2)-(z_1*y_2))
+p_vec_y=((x_1*z_2)-(z_1*x_2))
+p_vec_z=((x_1*y_2)-(y_1*x_2))
+p_vec=p_vec_x,-(p_vec_y),p_vec_z
+print("El producto vectorial de los anteriores vectores es: ", p_vec)
