@@ -1,0 +1,26 @@
+#Realice un codigo que haga la grafica de las siguientes funciones (puede hacer uso de las herramientas que sean necesarias)
+#y=15x²-23x+14
+#y=35x-14
+#realice el codigo en el siguiente renglon
+
+from ctypes import sizeof
+import matplotlib.pyplot as plt
+
+#definimos las 2 funciones
+# y=15x²-23x+14
+def f1(x):
+    return 15 * (x ** 2) - 23*x + 14
+# y=35x-14
+def f2(x):
+    return 35*x-14
+#asignamos un rango de valores a graficar 
+size = range(-20, 25)
+#Le damos los paramatros para que grafique las funciones y se le da el nombre para poder identificarlos
+plt.plot(size,[f1(i) for i in size], label= 'Funcion y=15x²-23x+14')
+plt.plot(size,[f2(i) for i in size], label= 'Función y=35x-14')
+#Los limites de la grafica
+plt.xlim(-10, 20)
+plt.ylim(-10, 20)
+#colocamos la leyenda en la parte inferior derecha
+plt.legend(loc='lower right')
+plt.show()   
