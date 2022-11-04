@@ -1,0 +1,35 @@
+'''Se ingresa la palabra que se va a adivinar / se inicia el contador de intentos / se imprime los espacios de la palabra'''
+word=input("Ingrese una palabra (En minuscula) para que sea adivinada: ")
+size=len(word)
+letras = []
+letras_2 = []
+for i in range(0,size):
+    letras.append('_')
+    letras_2.append(word[i])
+print(letras)
+
+
+def inicia_juego (letras,letras_2):
+    count = size + 7
+    print("Le quedan ", count, " intentos")
+
+    while count >0:
+        letra=input(str("Ingrese una letra: "))
+        if letra not in letras_2:
+            print("La letra ingresada no está, siga intentando")
+            count=count-1
+            print("Le quedan ",count," intentos")
+        for j in range (0,size):
+            if letra == letras_2[j]:
+                letras[j] = letra
+                print(letras)
+        if '_' not in letras:
+            print("Ganó")
+        break  # se rompe el ciclo
+    if count ==0:
+        print("Perdió")
+
+
+print(inicia_juego(letras, letras_2))
+
+
