@@ -1,0 +1,14 @@
+class musicos:
+    def __init__(self, nombre, grupo_solista, genero, precio, descripcion):
+        self.nombre = nombre
+        self.grupo_solista = grupo_solista
+        self.genero = genero
+        self.precio = precio
+        self.descripcion = descripcion
+
+grupo_1 = musicos("Grupo niche", "Grupo", "Salsa", 33000, "La mejor agrupación de salsa del mundo")
+grupo_2 =musicos("Guayacan orquesta", "grupo", "salsa", 400, "Otro grupo de salsa bien bacano")
+grupo_3 =musicos("Ruben Blades" , "solista", "salsa", 700, "El mejor cantante del world")
+grupo_4 = musicos("Queen", "grupo", "rock", 800, "Una banda muy bacana")
+
+print(musicos_3.precio, musicos_3.nombre, musicos_3.genero)
